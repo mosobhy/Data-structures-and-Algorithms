@@ -50,7 +50,7 @@ class Queue:
     def showQueue(self):
         try:
             for element in self.elements:
-                print(f'{element} | ', end='')
+                print(f'{element} || ', end='')
             print()
         except:
             raise 'No Elements'

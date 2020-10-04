@@ -46,3 +46,6 @@ print(balance_symbols('{{{((([[[]]])))}}}'))
 print(balance_symbols('[[[[[[[[)'))
 print(balance_symbols('}}}{{{{'))
 print(balance_symbols('([{}])'))
+print(balance_symbols('[{()]'))
+
+# this code still buggy, you have to check it line by line
