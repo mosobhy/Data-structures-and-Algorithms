@@ -30,8 +30,8 @@ class Deque:
 
     def isEmpty(self):
         if len(self.elements):
-            return True
-        return False
+            return False # not empty
+        return True # empty
 
     def add_front(self, element):       # equevilant to the push() in stack
         self.elements.append(element)
