@@ -30,10 +30,13 @@ def balance_symbols(string):
             if symbols.isEmpty():
                 return 'InBalanced'
             else:
-                if symbols.pop() is symbols.peek():
+                # does the string[index](closed bracket) matches the peek(the opened one)
+                # string[index] = '{' so the peek() = '}'
+                if match_symbol(string[index], symbols.peek()):
                     symbols.pop()
                 else:
-                    return 'Balanced'
+                    # the closed and the opened symobls are not matching
+                    return 'InBalanced'
         index += 1
     
     if symbols.isEmpty():
@@ -41,11 +44,25 @@ def balance_symbols(string):
 
     return 'InBalanced'
 
-print(balance_symbols('{([])}'))
-print(balance_symbols('{{{((([[[]]])))}}}'))
-print(balance_symbols('[[[[[[[[)'))
-print(balance_symbols('}}}{{{{'))
-print(balance_symbols('([{}])'))
-print(balance_symbols('[{()]'))
 
-# this code still buggy, you have to check it line by line
+def match_symbol(closed, opened):
+    # note that we have to put the symbols with the same index to use it to check whether they matches or not
+    # because of that we cannot match using the equality operator due to '}' is not '{'
+    opened_symobls = '[{('
+    closed_symobls = ']})'
+    
+    return closed_symobls.index(closed) == opened_symobls.index(opened)
+
+
+def main():
+
+    print(balance_symbols('{([])}'))
+    print(balance_symbols('{{{((([[[]]])))}}}'))
+    print(balance_symbols('[[[[[[[[)'))
+    print(balance_symbols('}}}{{{{'))
+    print(balance_symbols('([{}])'))
+    print(balance_symbols('[{()]'))
+
+
+if __name__ == '__main__':
+    main()
