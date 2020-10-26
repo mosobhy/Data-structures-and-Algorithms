@@ -7,7 +7,7 @@ of string and check wheither its a palindrome or not
 THE APPROACHE:
 
  - iterate over the string
-    - inserts evey character to from the rear add_rear(char)
+    - inserts evey character from the rear add_rear(char)
     now the front of the deque is holding the first char of the string and 
     the rear of the deque is holding the last char of the string
     , since we can remove from both the front and rear, we can compare them and continue only
