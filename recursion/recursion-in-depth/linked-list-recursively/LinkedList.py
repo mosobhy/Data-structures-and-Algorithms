@@ -77,6 +77,7 @@ class LinkedList:
                 prevPtr = currentPtr
                 currentPtr = currentPtr.next
 
+# this algorithms is very important
     def reverseList(self, node):
         ''' Recursive function that reverse the linked list ''' 
         if node == None or node.next == None:

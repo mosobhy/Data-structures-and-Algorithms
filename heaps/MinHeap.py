@@ -65,6 +65,7 @@ class MinHeap:
 
 
 
+    # NOTE: DIDN'T CATCH IDEA OF THIS FUNCTION YET
     def buildHeap(self, arr):
         '''
         This function accepts an array and produce a minHeap out of it

@@ -5,6 +5,8 @@ slots list==> this will be our hash table on which we are going to perform all t
 data list ==> this will store the data.. each slot of this list corresponds to it key in the slots list
 
 READ into the section of Hashing in the Problem solving using Data Structures and Algorithms in python Book
+
+NOTE: i didn't talk about how to remove elemetns from the hash table and all of its headache
 '''
 class HashTable:
     def __init__(self):
